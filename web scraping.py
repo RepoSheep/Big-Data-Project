@@ -96,6 +96,16 @@ for page in range(2):
 
 
         try:
+            skill_list = []
+            all_skills = driver.find_element("xpath","//label[@class='br-pill ba pv1 pl2 pr3 pointer PillButton_pillbutton__1JvIO']")
+            for skill in all_skills:
+                skill_list.append(skill.text)
+            print(skill_list)
+        except:
+            print("No skills found")
+
+
+        try:
             #get the salary range
             salary_min = driver.find_element(By.XPATH, "//div[@class='lh-solid']/span[1]").text
             salary_max = driver.find_element(By.XPATH, "//div[@class='lh-solid']/span[2]").text[2:]

@@ -94,7 +94,6 @@ for page in range(2):
         except:
             print("No job post id found")
 
-
         try:
             skill_list = []
             all_skills = driver.find_element("xpath","//label[@class='br-pill ba pv1 pl2 pr3 pointer PillButton_pillbutton__1JvIO']")
